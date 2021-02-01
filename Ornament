@@ -1,0 +1,17 @@
+def A1(c):
+    print('这是第一个装饰器')
+    def B1(*args, **kwargs):
+        print('添加第一种功能。。。。。')
+        return c(*args, **kwargs)
+    return B1
+def A2(c):
+    print('这是第二个装饰器')
+    def B2(*args, **kwargs):
+        print('添加第二种功能。。。。。')
+        return c(*args, **kwargs)
+    return B2
+@A1#》》》demo = A1（demo）
+@A2
+def demo():
+    print('乔凯松真帅气.......')
+demo()
